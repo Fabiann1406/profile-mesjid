@@ -592,7 +592,7 @@
 
                     shadow-sm
 
-                    hover:bg-white
+                    
 
                     transition
                 "
