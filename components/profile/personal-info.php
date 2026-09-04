@@ -109,9 +109,10 @@
     ====================================================== -->
 
     <form
+        id="profileForm"
         action="update-profile.php"
         method="POST"
-
+        enctype="multipart/form-data"
         class="p-6"
     >
 
@@ -119,6 +120,16 @@
             type="hidden"
             name="id"
             value="<?= $donor['id']; ?>"
+        >
+
+        <!-- Profile Photo Input (Hidden, triggered by avatar click) -->
+        <input 
+            type="file" 
+            id="profile_photo" 
+            name="profile_photo" 
+            accept="image/*" 
+            class="hidden" 
+            onchange="previewPhoto(this)"
         >
 
 

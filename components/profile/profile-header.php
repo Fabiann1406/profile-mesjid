@@ -18,46 +18,32 @@
     "
 >
 
-
-    <!-- Decorative Circle -->
-
+    <!-- Ukiran Islami (Islamic Motif) Background -->
     <div
         class="
             absolute
-            -right-20
-            -top-32
-
-            w-96
-            h-96
-
-            rounded-full
-
-            border-[55px]
-
-            border-white/5
+            top-0
+            right-0
+            opacity-10
+            pointer-events-none
         "
-    ></div>
+        style="width: 100%; height: 100%;"
+    >
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMaxYMin slice">
+            <defs>
+                <pattern id="islamic-motif" width="100" height="100" patternUnits="userSpaceOnUse" patternTransform="scale(2)">
+                    <path d="M50 0 L100 50 L50 100 L0 50 Z" fill="none" stroke="white" stroke-width="2"/>
+                    <circle cx="50" cy="50" r="30" fill="none" stroke="white" stroke-width="1.5"/>
+                    <path d="M20 20 L80 80 M20 80 L80 20" stroke="white" stroke-width="1"/>
+                    <path d="M50 20 L50 80 M20 50 L80 50" stroke="white" stroke-width="1"/>
+                    <polygon points="50,10 60,40 90,50 60,60 50,90 40,60 10,50 40,40" fill="none" stroke="white" stroke-width="1"/>
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#islamic-motif)" />
+        </svg>
+    </div>
 
-
-    <div
-        class="
-            absolute
-            -right-10
-            bottom-[-180px]
-
-            w-80
-            h-80
-
-            rounded-full
-
-            border-[40px]
-
-            border-white/5
-        "
-    ></div>
-
-
-    <div class="relative">
+    <div class="relative z-10">
 
 
         <div
@@ -75,8 +61,11 @@
 
             <!-- Avatar -->
 
-            <div
+            <label
+                for="profile_photo"
                 class="
+                    relative
+                    group
                     w-24
                     h-24
 
@@ -96,12 +85,27 @@
                     shadow-lg
 
                     shrink-0
+
+                    cursor-pointer
+                    overflow-hidden
                 "
+                title="Ganti Foto Profile"
             >
 
-                <?= htmlspecialchars($initials); ?>
+                <div id="avatar-preview" class="w-full h-full">
+                    <?php if (!empty($donor['profile_photo']) && file_exists($donor['profile_photo'])): ?>
+                        <img src="<?= htmlspecialchars($donor['profile_photo']) ?>" alt="Profile" class="w-full h-full object-cover">
+                    <?php else: ?>
+                        <div class="w-full h-full flex items-center justify-center">
+                            <?= htmlspecialchars($initials); ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
 
-            </div>
+                <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                    <i data-lucide="camera" class="w-8 h-8 text-white"></i>
+                </div>
+            </label>
 
 
             <!-- Text -->

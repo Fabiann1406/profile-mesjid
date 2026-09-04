@@ -149,10 +149,18 @@ $initials = strtoupper(
 
     <script src="https://unpkg.com/lucide@latest"></script>
 
+    <style>
+        .islamic-pattern {
+            background-color: #fdfaf2;
+            background-image:
+                radial-gradient(#d7e5d8 1px, transparent 1px);
+            background-size: 22px 22px;
+        }
+    </style>
 </head>
 
 
-<body class="bg-[#F7F8F3] text-slate-800">
+<body class="islamic-pattern text-slate-800">
 
 
 <div class="min-h-screen flex">
@@ -340,6 +348,26 @@ $initials = strtoupper(
 
         window.location.reload();
 
+    }
+
+    /*
+    |--------------------------------------------------------------------------
+    | PREVIEW PHOTO & ENABLE EDIT
+    |--------------------------------------------------------------------------
+    */
+
+    function previewPhoto(input) {
+        if (input.files && input.files[0]) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const avatarPreview = document.getElementById('avatar-preview');
+                if (avatarPreview) {
+                    avatarPreview.innerHTML = '<img src="' + e.target.result + '" alt="Profile" class="w-full h-full object-cover">';
+                }
+            }
+            reader.readAsDataURL(input.files[0]);
+            enableEdit();
+        }
     }
 
 </script>

@@ -154,11 +154,14 @@
                 justify-center
 
                 font-bold
+                overflow-hidden
             "
         >
-
-            <?= htmlspecialchars($initials); ?>
-
+            <?php if (!empty($donor['profile_photo']) && file_exists($donor['profile_photo'])): ?>
+                <img src="<?= htmlspecialchars($donor['profile_photo']) ?>" alt="Profile" class="w-full h-full object-cover">
+            <?php else: ?>
+                <?= htmlspecialchars($initials); ?>
+            <?php endif; ?>
         </div>
 
     </div>
