@@ -1,7 +1,7 @@
 <header
     class="
         h-20
-        bg-white
+        bg-mosque-900
         border-b
         border-slate-200
 
@@ -36,7 +36,8 @@
 
                 rounded-xl
 
-                bg-slate-50
+                bg-gold-500
+                text-mosque-950
 
                 flex
                 items-center
@@ -60,8 +61,8 @@
 
             <p
                 class="
-                    text-xs
-                    text-slate-400
+                    text-sm
+                    text-white
                 "
             >
                 Dashboard Donatur
@@ -69,8 +70,9 @@
 
             <h2
                 class="
-                    text-lg
+                    text-sm
                     font-bold
+                    text-gold-500
                 "
             >
                 Profil Saya
@@ -97,7 +99,8 @@
 
                 rounded-xl
 
-                bg-slate-50
+                bg-gold-500
+                text-mosque-950
 
                 flex
                 items-center
@@ -146,8 +149,10 @@
 
                 rounded-xl
 
-                bg-mosque-100
-                text-mosque-700
+                bg-gold-500/10
+                text-gold-600
+                border
+                border-gold-500/20
 
                 flex
                 items-center

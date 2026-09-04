@@ -5,7 +5,13 @@
 
         rounded-3xl
 
-        bg-[#0B594B]
+        bg-mosque-950
+        bg-gradient-to-br
+        from-mosque-950
+        to-mosque-900
+
+        border
+        border-gold-500/20
 
         text-white
 
@@ -32,11 +38,11 @@
         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMaxYMin slice">
             <defs>
                 <pattern id="islamic-motif" width="100" height="100" patternUnits="userSpaceOnUse" patternTransform="scale(2)">
-                    <path d="M50 0 L100 50 L50 100 L0 50 Z" fill="none" stroke="white" stroke-width="2"/>
-                    <circle cx="50" cy="50" r="30" fill="none" stroke="white" stroke-width="1.5"/>
-                    <path d="M20 20 L80 80 M20 80 L80 20" stroke="white" stroke-width="1"/>
-                    <path d="M50 20 L50 80 M20 50 L80 50" stroke="white" stroke-width="1"/>
-                    <polygon points="50,10 60,40 90,50 60,60 50,90 40,60 10,50 40,40" fill="none" stroke="white" stroke-width="1"/>
+                    <path d="M50 0 L100 50 L50 100 L0 50 Z" fill="none" stroke="#D4AF37" stroke-width="1.5"/>
+                    <circle cx="50" cy="50" r="30" fill="none" stroke="#D4AF37" stroke-width="1"/>
+                    <path d="M20 20 L80 80 M20 80 L80 20" stroke="#D4AF37" stroke-width="0.5"/>
+                    <path d="M50 20 L50 80 M20 50 L80 50" stroke="#D4AF37" stroke-width="0.5"/>
+                    <polygon points="50,10 60,40 90,50 60,60 50,90 40,60 10,50 40,40" fill="none" stroke="#D4AF37" stroke-width="0.75"/>
                 </pattern>
             </defs>
             <rect width="100%" height="100%" fill="url(#islamic-motif)" />
@@ -114,11 +120,14 @@
 
                 <p
                     class="
-                        text-green-200
+                        text-gold-500
                         text-sm
+                        font-medium
+                        tracking-wider
+                        uppercase
                     "
                 >
-                    Assalamu'alaikum 👋
+                    Assalamu'alaikum
                 </p>
 
 
@@ -171,7 +180,7 @@
                             class="
                                 w-4
                                 h-4
-                                text-yellow-300
+                                text-gold-500
                             "
                         ></i>
 
@@ -182,7 +191,7 @@
 
                     <span
                         class="
-                            text-green-200
+                            text-slate-300
                             text-sm
                         "
                     >

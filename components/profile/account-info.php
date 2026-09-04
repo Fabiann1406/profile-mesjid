@@ -2,7 +2,7 @@
     id="account"
 
     class="
-        bg-white
+        bg-mosque-900
 
         rounded-2xl
 
@@ -34,7 +34,7 @@
 
                 rounded-xl
 
-                bg-mosque-50
+                bg-gold-500
 
                 flex
                 items-center
@@ -66,6 +66,7 @@
                 class="
                     text-lg
                     font-bold
+                    text-gold-500
                 "
             >
                 Status Akun
@@ -76,6 +77,7 @@
                 class="
                     text-sm
                     text-slate-400
+                    text-white
 
                     mt-1
                 "
@@ -89,6 +91,7 @@
             <div
                 class="
                     mt-5
+                    
 
                     grid
                     grid-cols-1

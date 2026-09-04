@@ -10,7 +10,7 @@
         w-72
         h-screen
 
-        bg-[#073F37]
+        bg-mosque-900
         text-white
 
         flex
@@ -24,6 +24,32 @@
         duration-300
     "
 >
+
+ <!-- Ukiran Islami (Islamic Motif) Background -->
+    <div
+        class="
+            absolute
+            top-0
+            right-0
+            opacity-10
+            pointer-events-none
+        "
+        style="width: 100%; height: 100%;"
+    >
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMaxYMin slice">
+            <defs>
+                <pattern id="islamic-motif" width="100" height="100" patternUnits="userSpaceOnUse" patternTransform="scale(2)">
+                    <path d="M50 0 L100 50 L50 100 L0 50 Z" fill="none" stroke="#D4AF37" stroke-width="1.5"/>
+                    <circle cx="50" cy="50" r="30" fill="none" stroke="#D4AF37" stroke-width="1"/>
+                    <path d="M20 20 L80 80 M20 80 L80 20" stroke="#D4AF37" stroke-width="0.5"/>
+                    <path d="M50 20 L50 80 M20 50 L80 50" stroke="#D4AF37" stroke-width="0.5"/>
+                    <polygon points="50,10 60,40 90,50 60,60 50,90 40,60 10,50 40,40" fill="none" stroke="#D4AF37" stroke-width="0.75"/>
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#islamic-motif)" />
+        </svg>
+    </div>
+
 
 
     <!-- =====================================================
@@ -50,7 +76,7 @@
                     w-11
                     h-11
                     rounded-xl
-                    bg-white
+                    bg-gold-500/10
                     flex
                     items-center
                     justify-center
@@ -62,7 +88,7 @@
                     class="
                         w-6
                         h-6
-                        text-mosque-700
+                        text-gold-500
                     "
                 ></i>
 
@@ -83,7 +109,7 @@
                 <p
                     class="
                         text-xs
-                        text-green-200
+                        text-gold-400
                     "
                 >
                     Donatur Area
@@ -104,7 +130,7 @@
 
         <div
             class="
-                bg-white/10
+                bg-mosque-950
                 rounded-2xl
                 p-4
             "
@@ -119,8 +145,10 @@
                         h-11
                         rounded-full
 
-                        bg-green-100
-                        text-mosque-700
+                        bg-gold-500/10
+                        text-gold-500
+                        border
+                        border-gold-500/30
 
                         flex
                         items-center
@@ -154,7 +182,7 @@
                     <p
                         class="
                             text-xs
-                            text-green-200
+                            text-gold-400
                             mt-0.5
                         "
                     >
@@ -182,7 +210,7 @@
                 text-xs
                 uppercase
                 tracking-widest
-                text-green-300
+                text-gold-500/70
                 px-4
                 mb-3
             "
@@ -205,8 +233,8 @@
 
                 rounded-xl
 
-                bg-white
-                text-mosque-800
+                bg-gold-500
+                text-mosque-950
 
                 font-semibold
 
@@ -269,7 +297,9 @@
         <div
             class="
                 rounded-2xl
-                bg-[#0D5549]
+                bg-mosque-950
+                border
+                border-gold-500/20
                 p-5
             "
         >
@@ -281,7 +311,7 @@
                     class="
                         w-5
                         h-5
-                        text-yellow-300
+                        text-gold-500
                     "
                 ></i>
 
